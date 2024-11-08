@@ -2,6 +2,58 @@ body {
     background-color: #00171f;
 }
 
+#sidebar.hidden {
+    transform: translateX(-100%); /* Mueve la barra lateral fuera de la vista */
+    transition: transform 0.3s ease; /* Transición suave al ocultar/mostrar */
+}
+
+#sidebar {
+    transition: transform 0.3s ease; /* Transición suave al mostrar */
+}
+
+#sidebar {
+    height: 100vh; /* Asegura que la barra lateral ocupe toda la altura de la ventana */
+    overflow-y: auto; /* Habilita el desplazamiento vertical si el contenido excede la altura */
+    background-color: #111;
+    padding-top: 50px;
+    position: fixed;
+    width: 170px;
+    left: 0; /* Asegura que esté siempre a la izquierda */
+    top: 0; /* Comienza desde el inicio de la página */
+    bottom: 0; /* Se extiende hasta el final de la página */
+    z-index: 1000; /* Para asegurarse de que esté por encima de otros elementos */
+}
+
+.sidenav {
+    background-color: #1c1c1e;  /* Fondo más claro para mejorar contraste */
+    padding-top: 20px;
+    position: fixed;
+    width: 250px;  /* Aumentamos el ancho para mejorar la legibilidad */
+    height: 100%;
+    overflow-y: auto;
+}
+
+.sidenav h6 {
+    color: #f8f9fa;  /* Mejor contraste en títulos */
+    padding-left: 15px;
+}
+
+.sidenav a {
+    display: block;
+    padding: 10px;
+    color: #818181;
+    text-decoration: none;
+    font-size: 15px; /* Ajusta el tamaño del texto si es necesario */
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+.sidenav .fa, .material-icons {
+    margin-right: 10px;  /* Espacio para íconos */
+}
+
 iframe {
-    padding-top: 200px;
+    padding-left: 172px;
+    padding-top: 150px;
 }
